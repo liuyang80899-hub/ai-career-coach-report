@@ -1,0 +1,907 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>为什么选择AI职业教练 — 方向论证报告</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+:root{--primary:#6366f1;--primary-dark:#4f46e5;--primary-light:#a5b4fc;--accent:#f59e0b;--accent-light:#fef3c7;--success:#10b981;--success-light:#d1fae5;--danger:#ef4444;--danger-light:#fee2e2;--info:#3b82f6;--bg-dark:#0f172a;--bg-card:#1e293b;--bg-card2:#273548;--text-light:#e2e8f0;--text-muted:#94a3b8;--border:#334155;--gradient-hero:linear-gradient(135deg,#1e1b4b 0%,#312e81 30%,#1e3a5f 70%,#0f172a 100%)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Inter',-apple-system,sans-serif;background:var(--bg-dark);color:var(--text-light);line-height:1.7;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+/* Hero */
+.hero{padding:100px 24px 80px;text-align:center;position:relative;overflow:hidden;background:var(--gradient-hero)}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(99,102,241,.2) 0%,transparent 60%);animation:pulse 10s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.2);opacity:.5}}
+.hero-inner{position:relative;z-index:1}
+.hero-tag{display:inline-block;padding:8px 20px;border-radius:999px;border:1px solid rgba(99,102,241,.4);background:rgba(99,102,241,.15);font-size:13px;letter-spacing:2px;color:var(--primary-light);margin-bottom:24px}
+.hero h1{font-size:clamp(36px,6vw,64px);font-weight:900;background:linear-gradient(135deg,#fff 20%,var(--primary-light) 50%,var(--accent) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;line-height:1.15}
+.hero-sub{font-size:clamp(16px,2.5vw,22px);color:rgba(255,255,255,.7);font-weight:300;max-width:700px;margin:0 auto 32px}
+.hero-meta{font-size:14px;color:rgba(255,255,255,.4)}
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 0}
+.nav-inner{display:flex;gap:8px;overflow-x:auto;justify-content:center;padding:0 24px}
+.nav-btn{padding:10px 20px;background:transparent;color:var(--text-muted);text-decoration:none;border-radius:10px;font-size:13px;font-weight:600;white-space:nowrap;transition:all .3s;border:1px solid transparent}
+.nav-btn:hover,.nav-btn.active{color:white;background:rgba(99,102,241,.2);border-color:rgba(99,102,241,.3)}
+/* Section */
+.section{padding:80px 0}
+.section-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--primary-light);margin-bottom:12px;font-weight:600}
+.section-title{font-size:clamp(28px,4vw,42px);font-weight:900;margin-bottom:16px;line-height:1.2}
+.section-desc{font-size:16px;color:var(--text-muted);max-width:800px;margin-bottom:40px;line-height:1.8}
+/* Cards */
+.card{background:var(--bg-card);border-radius:20px;padding:32px;border:1px solid var(--border);transition:all .3s;margin-bottom:20px}
+.card:hover{border-color:rgba(99,102,241,.4);box-shadow:0 10px 40px rgba(99,102,241,.15)}
+.card-title{font-size:20px;font-weight:700;margin-bottom:16px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.card-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.card-grid-3{grid-template-columns:1fr}}
+/* Triangle */
+.triangle-box{display:flex;align-items:center;justify-content:center;padding:48px 0}
+.tri-item{text-align:center;padding:24px;flex:1}
+.tri-icon{font-size:48px;margin-bottom:12px}
+.tri-label{font-size:18px;font-weight:700;margin-bottom:8px}
+.tri-desc{font-size:13px;color:var(--text-muted);line-height:1.6}
+/* Compare */
+.vs-row{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(51,65,85,.5)}
+.vs-row:last-child{border-bottom:none}
+.vs-label{width:120px;font-size:13px;color:var(--text-muted);flex-shrink:0}
+.vs-them{flex:1;font-size:14px;color:rgba(239,68,68,.8);padding:8px 12px;background:rgba(239,68,68,.08);border-radius:8px}
+.vs-us{flex:1;font-size:14px;color:rgba(16,185,129,.9);padding:8px 12px;background:rgba(16,185,129,.08);border-radius:8px}
+/* Data grid */
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+.data-card{background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:16px;padding:24px;text-align:center}
+.data-num{font-size:clamp(28px,4vw,40px);font-weight:900;color:white;margin-bottom:4px}
+.data-label{font-size:13px;color:var(--text-muted)}
+.data-src{font-size:11px;color:rgba(148,163,184,.6);margin-top:8px}
+/* Table */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:16px 0}
+.tbl th{padding:14px 12px;text-align:left;font-weight:700;color:var(--text-light);background:rgba(99,102,241,.1);font-size:12px;letter-spacing:.5px}
+.tbl td{padding:14px 12px;border-bottom:1px solid rgba(51,65,85,.4);color:var(--text-muted)}
+.tbl tbody tr:hover{background:rgba(99,102,241,.05)}
+/* Quote */
+.quote{border-left:4px solid var(--accent);background:rgba(245,158,11,.08);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;font-size:15px;line-height:1.8}
+.quote strong{color:var(--accent)}
+.quote-danger{border-left-color:var(--danger);background:rgba(239,68,68,.08)}
+.quote-danger strong{color:var(--danger)}
+.quote-success{border-left-color:var(--success);background:rgba(16,185,129,.08)}
+.quote-success strong{color:var(--success)}
+/* Tag */
+.tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700}
+.tag-red{background:rgba(239,68,68,.2);color:#fca5a5;border:1px solid rgba(239,68,68,.3)}
+.tag-green{background:rgba(16,185,129,.2);color:#6ee7b7;border:1px solid rgba(16,185,129,.3)}
+.tag-blue{background:rgba(99,102,241,.2);color:#a5b4fc;border:1px solid rgba(99,102,241,.3)}
+.tag-yellow{background:rgba(245,158,11,.2);color:#fcd34d;border:1px solid rgba(245,158,11,.3)}
+/* Highlight box */
+.highlight{border-radius:20px;padding:40px;margin:32px 0;position:relative;overflow:hidden}
+.hl-purple{background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(139,92,246,.15));border:1px solid rgba(99,102,241,.3)}
+.hl-green{background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(52,211,153,.12));border:1px solid rgba(16,185,129,.3)}
+.hl-amber{background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(251,191,36,.12));border:1px solid rgba(245,158,11,.3)}
+/* Divider */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:60px 0}
+/* Scroll top */
+.scroll-top{position:fixed;bottom:40px;right:40px;width:50px;height:50px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(100px);transition:all .3s;z-index:1000;box-shadow:0 10px 30px rgba(99,102,241,.4)}
+.scroll-top.visible{opacity:1;transform:translateY(0)}
+.scroll-top::before{content:'\2191';color:white;font-size:24px;font-weight:bold}
+/* Quadrant */
+.quadrant{position:relative;width:100%;max-width:600px;margin:32px auto;aspect-ratio:1;background:rgba(15,23,42,.5);border-radius:16px;border:1px solid var(--border)}
+.q-axis-x,.q-axis-y{position:absolute;background:rgba(148,163,184,.2)}
+.q-axis-x{left:10%;right:10%;top:50%;height:1px}
+.q-axis-y{top:10%;bottom:10%;left:50%;width:1px}
+.q-label{position:absolute;font-size:11px;color:var(--text-muted)}
+.q-dot{position:absolute;padding:8px 14px;border-radius:10px;font-size:12px;font-weight:700;transform:translate(-50%,-50%);white-space:nowrap}
+/* Footer */
+.footer{text-align:center;padding:60px 24px;color:var(--text-muted);font-size:13px;border-top:1px solid var(--border);margin-top:60px}
+.check{color:#10b981}.cross{color:#ef4444}
+/* Scene cards */
+.scene{background:var(--bg-card);border-radius:16px;padding:24px;border:1px solid var(--border);transition:all .3s}
+.scene:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 10px 30px rgba(99,102,241,.2)}
+.scene-emoji{font-size:32px;margin-bottom:12px}
+.scene-title{font-size:16px;font-weight:700;margin-bottom:8px}
+.scene-desc{font-size:13px;color:var(--text-muted);line-height:1.7}
+.scene-tag{margin-top:12px}
+/* Responsive */
+@media(max-width:768px){.section{padding:50px 0}.hero{padding:60px 24px 50px}.card{padding:24px}.triangle-box{flex-direction:column}.vs-row{flex-direction:column;gap:8px}.vs-label{width:100%}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-tag">方向论证报告</div>
+<h1>为什么选择<br>AI职业教练</h1>
+<p class="hero-sub">赛道价值论证 · 产品形态推演 · 竞争机会分析</p>
+<p class="hero-meta">刘阳 · 2026年3月30日</p>
+</div>
+</div>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="#what" class="nav-btn">🎯 是什么</a>
+<a href="#p1" class="nav-btn">📊 赛道价值</a>
+<a href="#p1-2" class="nav-btn">🔍 为什么是职业</a>
+<a href="#p1-3" class="nav-btn">💰 市场规模</a>
+<a href="#p1-4" class="nav-btn">⏰ 为什么是现在</a>
+<a href="#p2-1" class="nav-btn">🏢 现有玩家</a>
+<a href="#p2-2" class="nav-btn">🌊 蓝海机会</a>
+<a href="#p2-3" class="nav-btn">🛡️ 竞争护城河</a>
+<a href="#p2-4" class="nav-btn">⚠️ 窗口与风险</a>
+</div>
+</nav>
+<!-- ==================== 开篇：AI职业教练是什么 ==================== -->
+<section class="section" id="what">
+<div class="container">
+<div class="section-label">开篇</div>
+<h2 class="section-title">AI职业教练是什么？</h2>
+<p class="section-desc">在解释"为什么做"之前，先用30秒让你知道"我们要做什么"。</p>
+
+<div class="highlight hl-purple" style="text-align:center">
+<p style="font-size:clamp(18px,3vw,26px);font-weight:900;color:white;line-height:1.5;max-width:800px;margin:0 auto">
+一个从你毕业陪你到退休的AI职业教练<br>
+<span style="font-weight:300;font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,.7)">它<strong>不是</strong>求职工具，<strong>不是</strong>心理App，<strong>不是</strong>知识付费平台<br>而是一个能理解你、记住你、陪伴你、引导你整个职业生涯的AI伙伴</span>
+</p>
+</div>
+
+<div class="card" style="margin-top:32px">
+  <div class="card-title">产品形态：打开App你会看到什么</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px">
+    <div style="padding:20px;background:rgba(99,102,241,.08);border-radius:12px;border:1px solid rgba(99,102,241,.2)">
+      <h4 style="color:var(--primary-light);margin-bottom:8px;font-size:16px">📝 你的职业时间线</h4>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.7">自动整理你每一段经历、项目、技能、高光时刻。一年后回头看，清晰看见自己的成长轨迹。</p>
+    </div>
+    <div style="padding:20px;background:rgba(99,102,241,.08);border-radius:12px;border:1px solid rgba(99,102,241,.2)">
+      <h4 style="color:var(--primary-light);margin-bottom:8px;font-size:16px">💬 随时聊职业困惑</h4>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.7">"新领导不认可我怎么办？""这个Offer该接吗？"不用重新自我介绍，它记得你的一切。</p>
+    </div>
+    <div style="padding:20px;background:rgba(99,102,241,.08);border-radius:12px;border:1px solid rgba(99,102,241,.2)">
+      <h4 style="color:var(--primary-light);margin-bottom:8px;font-size:16px">🔧 高频工具入口</h4>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.7">周报代写、简历更新、项目复盘、求职追踪——所有工具都带着你的职业上下文，不用每次重新输入。</p>
+    </div>
+  </div>
+  <p style="margin-top:20px;font-size:14px;color:var(--text-muted)">核心体验：随着你使用时间越长，它越懂你——懂你的能力边界，懂你的价值观，懂你的追求。它不是一次性工具，是你整个职业生涯的"外部大脑"和"成长伙伴"。</p>
+</div>
+
+<div class="card-grid-3" style="margin:40px 0">
+<div style="text-align:center;padding:32px 24px;background:var(--bg-card);border-radius:20px;border:1px solid var(--border)">
+<div style="font-size:56px;margin-bottom:16px">📊</div>
+<h3 style="font-size:20px;font-weight:800;margin-bottom:12px">懂职场数据</h3>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">行业趋势、薪资行情、岗位要求、公司分析——比你自己花3小时查到的更全面、更精准、更贴合你的情况</p>
+</div>
+<div style="text-align:center;padding:32px 24px;background:var(--bg-card);border-radius:20px;border:1px solid var(--border)">
+<div style="font-size:56px;margin-bottom:16px">🧠</div>
+<h3 style="font-size:20px;font-weight:800;margin-bottom:12px">记得你是谁</h3>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">你的经历、能力、价值观、每一次职业决策——用3个月后，它比你最好的朋友还了解你的职业处境</p>
+</div>
+<div style="text-align:center;padding:32px 24px;background:var(--bg-card);border-radius:20px;border:1px solid var(--border)">
+<div style="font-size:56px;margin-bottom:16px">💛</div>
+<h3 style="font-size:20px;font-weight:800;margin-bottom:12px">情感共鸣</h3>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">理解你的焦虑、肯定你的成长、在低谷时提醒你曾经的高光——不是冷冰冰的工具，是真正的"教练"</p>
+<div style="margin-top:12px;padding:10px 14px;background:rgba(245,158,11,.1);border-radius:8px;font-size:12px;color:var(--text-muted);line-height:1.6">
+⚠️ 这不是AI陪聊。情感共鸣不是产品目的，而是<strong style="color:white">使用工具过程中自然产生的副产品</strong>。你来是为了写简历、追踪求职进度、复盘项目——情感连接在解决实际问题的过程中自然积累。这是与Character.AI"为聊而聊"的本质区别：<br><br>
+Character.AI靠新鲜感维持，新鲜感退去用户就走了；我们靠高频工具维持留存，情感随着使用时间自然加深——<strong>工具带来频率，频率产生记忆，记忆产生情感</strong>。所以我们不会遇到Character.AI式的留存衰减。
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:32px">
+<div class="card-title">与现有产品的本质区别</div>
+<div class="vs-row">
+<div class="vs-label">vs 招聘平台</div>
+<div class="vs-them">帮你"找到一份工作"——找到就走，关系结束</div>
+<div class="vs-us">帮你"经营一段职业"——从毕业到退休，关系持续</div>
+</div>
+<div class="vs-row">
+<div class="vs-label">vs 通用AI</div>
+<div class="vs-them">什么都能聊，但每次都要重新自我介绍，记不住你</div>
+<div class="vs-us">专注职业领域，记住你的一切，越用越懂你</div>
+</div>
+<div class="vs-row">
+<div class="vs-label">vs 人工教练</div>
+<div class="vs-them">一小时¥300-800，要预约，一年见不了几次</div>
+<div class="vs-us">随时在线，费用极低，而且它的记忆比人更可靠</div>
+</div>
+</div>
+
+<div class="quote" style="margin-top:32px">
+<strong>这就是我们要做的事。</strong>接下来回答两个问题：<br>
+第一，为什么选AI+职业这个赛道？（赛道够不够大？时机对不对？）<br>
+第二，为什么是"AI职业教练"这个产品形态？（机会在哪？凭什么能做？）
+</div>
+</div>
+</section>
+
+<!-- ==================== 第一部分：为什么选AI+职业赛道 ==================== -->
+<div class="divider"></div>
+
+<section class="section" id="p1">
+<div class="container">
+<div class="section-label">第一部分</div>
+<h2 class="section-title">为什么选择 AI + 职业赛道？</h2>
+<p class="section-desc">从AI市场全局出发，逐步收束到"职业"这个方向——不是拍脑袋选的，是用排除法筛出来的。</p>
+
+<!-- 1.1 垂直Agent -->
+<div class="card">
+<div class="card-title">1.1 前提：垂直任务Agent是当前AI创业的最佳方向</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">我们完成了一份完整的AI产品市场调研（覆盖全球+中国、ToB+ToC、6大品类、34个赛道），以下是核心结论。详细分析见《AI产品市场调研分析V3.0》完整报告。</p>
+
+<div class="card-grid" style="margin-bottom:20px">
+<div style="padding:20px;background:rgba(239,68,68,.08);border-radius:12px;border:1px solid rgba(239,68,68,.2)">
+<h4 style="color:#fca5a5;margin-bottom:8px">❌ 不做：独立通用AI助手</h4>
+<p style="font-size:13px;color:var(--text-muted)">ChatGPT/豆包/Gemini等巨头免费覆盖，2026春节四大平台合计投入超45亿元补贴。创业团队无法正面竞争。</p>
+</div>
+<div style="padding:20px;background:rgba(239,68,68,.08);border-radius:12px;border:1px solid rgba(239,68,68,.2)">
+<h4 style="color:#fca5a5;margin-bottom:8px">❌ 不做：纯AI效率工具壳</h4>
+<p style="font-size:13px;color:var(--text-muted)">AI应用年留存仅21.1%（vs 非AI 30.7%），退款率高20%，年流失快30%。纯功能包装无壁垒。</p>
+</div>
+<div style="padding:20px;background:rgba(245,158,11,.08);border-radius:12px;border:1px solid rgba(245,158,11,.2)">
+<h4 style="color:#fcd34d;margin-bottom:8px">⚠️ 谨慎：纯AI陪伴/角色聊天</h4>
+<p style="font-size:13px;color:var(--text-muted)">Character.AI活跃用户从2800万跌至2000万（-29%），新鲜感衰减是结构性问题。为聊而聊无法建立长期留存。</p>
+</div>
+<div style="padding:20px;background:rgba(16,185,129,.08);border-radius:12px;border:1px solid rgba(16,185,129,.2)">
+<h4 style="color:#6ee7b7;margin-bottom:8px">✅ 最佳：垂直任务Agent</h4>
+<p style="font-size:13px;color:var(--text-muted)">窗口仍开放，Agent形态未收敛。a16z称其为"全新品类"。垂直闭环+数据沉淀=可建立壁垒。完整市场分析见 <a href="https://liuyang80899-hub.github.io/ai-career-coach-report/" target="_blank" style="color:var(--primary-light)">《AI产品市场调研分析V3.0》</a>。</p>
+</div>
+</div>
+
+<div class="highlight hl-amber" style="text-align:center;padding:28px">
+<p style="font-size:18px;font-weight:800;color:white">ToC AI成功公式</p>
+<p style="font-size:clamp(16px,2.5vw,24px);font-weight:900;color:var(--accent);margin:12px 0">高频场景 × 可验收结果 × 替代成本</p>
+<p style="font-size:14px;color:var(--text-muted)">三条缺一不可。所有成功案例（Midjourney/Notion AI/CapCut/美图）均同时满足。<br>核心问题变成：<strong style="color:white">选哪个垂直领域？</strong></p>
+</div>
+<p style="font-size:12px;color:rgba(148,163,184,.5);margin-top:12px">数据来源：RevenueCat/TechCrunch 2026.03 · a16z Gen AI Report 6th Ed · Fortune 2026.02 · QuestMobile 2026</p>
+</div>
+</div>
+</section>
+
+<!-- 1.2 为什么是职业 -->
+<section class="section" id="p1-2" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">1.2 为什么是"职业"这个垂直领域？</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">在所有垂直方向中——教育、医疗、法律、创意、职业——为什么"职业"是最优选择？</p>
+
+<h4 style="margin-bottom:16px;color:var(--primary-light)">📊 五个垂类的横向对比</h4>
+<table class="tbl" style="margin-bottom:28px">
+<thead><tr><th>评估维度</th><th>教育</th><th>医疗</th><th>法律</th><th>创意</th><th style="color:#6ee7b7">职业 ✅</th></tr></thead>
+<tbody>
+<tr><td><strong>使用频率</strong></td><td>中（在学时高/毕业后断崖）</td><td>低（生病才用）</td><td>极低（纠纷才用）</td><td>中高（创作者高频）</td><td style="color:#6ee7b7"><strong>高（求职每天/在职每周）</strong></td></tr>
+<tr><td><strong>覆盖人群</strong></td><td>学生为主（约3亿）</td><td>全人群（但分极多科室）</td><td>极窄（纠纷当事人）</td><td>创作者（数千万）</td><td style="color:#6ee7b7"><strong>8.7亿劳动力</strong></td></tr>
+<tr><td><strong>AI适配度</strong></td><td>高（个性化学习）</td><td>高但受监管</td><td>高但受监管</td><td>极高（已验证：Midjourney等）</td><td style="color:#6ee7b7"><strong>高（记忆+个性化+长期跟踪）</strong></td></tr>
+<tr><td><strong>监管风险</strong></td><td>中（教培政策敏感）</td><td>极高（医疗资质）</td><td>高（执业限制）</td><td>低</td><td style="color:#6ee7b7"><strong>低（无特殊资质要求）</strong></td></tr>
+<tr><td><strong>竞争格局</strong></td><td>红海（好未来/猿辅导已AI化）</td><td>巨头占位（腾讯/阿里健康）</td><td>有玩家（法大大/幂律智能）</td><td>红海（Midjourney/剪映/美图）</td><td style="color:#6ee7b7"><strong>完全空白</strong></td></tr>
+<tr><td><strong>付费意愿</strong></td><td>高（教育消费成熟）</td><td>高（但走医保多）</td><td>中（律师咨询已有价格锚）</td><td>中（工具付费验证过）</td><td style="color:#6ee7b7"><strong>已验证（在行¥300-800/次）</strong></td></tr>
+<tr><td><strong>综合评价</strong></td><td>监管+红海</td><td>监管+巨头</td><td>太窄+监管</td><td>已红海</td><td style="color:#6ee7b7;font-weight:700">✅ 高频+广覆盖+空白+低监管</td></tr>
+</tbody>
+</table>
+
+<div class="quote" style="margin-bottom:28px">
+<strong>结论：</strong>职业是唯一同时满足"高频、人群广、AI适配、监管低、竞争空白"五个条件的垂类：
+<ul style="margin:12px 0 0 20px;padding:0;color:var(--text-muted);font-size:13px;line-height:1.8">
+  <li><strong>教育：</strong>虽然AI适配度高，但教培监管敏感且好未来/猿辅导等巨头已完成AI化，红海一片</li>
+  <li><strong>医疗：</strong>刚需但需要医疗资质，监管极高，腾讯/阿里健康早已占位，创业公司无法切入</li>
+  <li><strong>法律：</strong>市场空间狭窄（仅纠纷当事人需要），同样有执业资质限制，竞争壁垒高</li>
+  <li><strong>创意：</strong>Midjourney/剪映/美图等巨头已经占领市场，AI绘画/AI视频已是红海</li>
+</ul>
+只有职业，同时满足所有条件——这不是我们选了职业，是职业从所有选项中"脱颖而出"。
+</div>
+
+<div class="card-grid">
+<div style="padding:24px;background:rgba(99,102,241,.08);border-radius:16px;border-left:4px solid var(--primary)">
+<h4 style="margin-bottom:10px">🌍 需求普遍性</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">中国有<strong style="color:white">8.7亿</strong>劳动力人口、<strong style="color:white">2.4亿</strong>接受过高等教育的人口、每年<strong style="color:white">1200万+</strong>新毕业生进入职场。职业是几乎每个成年人一生中参与时间最长、利害最大的活动。</p>
+</div>
+<div style="padding:24px;background:rgba(245,158,11,.08);border-radius:16px;border-left:4px solid var(--accent)">
+<h4 style="margin-bottom:10px">🔄 需求高频性</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">不是"偶尔用一次"的场景。求职期<strong style="color:white">每天</strong>都在投简历、准备面试、等回复；在职期<strong style="color:white">每周</strong>都有周报要写、项目要复盘、职场压力要消化。触发频次远超医疗、法律等低频垂类。</p>
+</div>
+<div style="padding:24px;background:rgba(16,185,129,.08);border-radius:16px;border-left:4px solid var(--success)">
+<h4 style="margin-bottom:10px">🕳️ 需求未被满足</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">现有产品（BOSS直聘/猎聘/智联）只覆盖<strong style="color:white">"找工作"</strong>这一个环节。一旦入职，用户就流失了。但人的职业困惑——方向对不对？要不要跳槽？35岁了怎么办？——<strong style="color:white">每天都在发生</strong>，完全无人服务。</p>
+</div>
+<div style="padding:24px;background:rgba(139,92,246,.08);border-radius:16px;border-left:4px solid #8b5cf6">
+<h4 style="margin-bottom:10px">🤖 AI天然适配</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">职业决策需要三件事：<strong style="color:white">记忆</strong>（你的经历和偏好）、<strong style="color:white">个性化</strong>（你的具体处境）、<strong style="color:white">长期跟踪</strong>（你的变化轨迹）。这恰好是AI相比人类教练的结构性优势——AI不会忘记你说过的话。</p>
+</div>
+</div>
+
+<div class="quote" style="margin-top:24px">
+<strong>对照ToC AI成功公式验证：</strong><br>
+✅ 高频场景 — 求职期每天、在职期每周<br>
+✅ 可验收结果 — 拿到offer、谈到更高薪资、看到自己的成长时间线<br>
+✅ 替代成本 — AI记住你的一切经历和决策，用3个月后换产品意味着从零开始
+</div>
+</div>
+</div>
+</section>
+
+<!-- 1.3 市场规模 -->
+<section class="section" id="p1-3" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">1.3 这个赛道有多大？</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">"赛道好"不等于"赛道大"。用数据说话。</p>
+
+<h4 style="margin-bottom:16px;color:var(--primary-light)">🇨🇳 中国市场</h4>
+
+<div class="data-grid">
+<div class="data-card">
+<div class="data-num">2.4亿</div>
+<div class="data-label">接受高等教育人口（核心目标用户）</div>
+<div class="data-src">教育部 2025.12</div>
+</div>
+<div class="data-card">
+<div class="data-num">1,222万</div>
+<div class="data-label">2025届高校毕业生（同比+43万）</div>
+<div class="data-src">教育部/央视新闻 2024.11</div>
+</div>
+<div class="data-card">
+<div class="data-num">6,070万</div>
+<div class="data-label">BOSS直聘年均MAU</div>
+<div class="data-src">BOSS直聘2025年报</div>
+</div>
+<div class="data-card">
+<div class="data-num">~193亿</div>
+<div class="data-label">2025年网络招聘市场规模</div>
+<div class="data-src">艾瑞咨询 2025</div>
+</div>
+<div class="data-card">
+<div class="data-num">82.68亿</div>
+<div class="data-label">BOSS直聘年营收（净利润15.67亿）</div>
+<div class="data-src">BOSS直聘2025年报</div>
+</div>
+<div class="data-card" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3)">
+<div class="data-num" style="color:#fca5a5">≈ 0</div>
+<div class="data-label">中国AI职业教练现有市场规模</div>
+<div class="data-src">完全空白——没有任何玩家</div>
+</div>
+</div>
+
+<div class="quote-success" style="margin:24px 0">
+<strong>关键洞察：</strong>BOSS直聘一家年营收就超82亿，证明"职业服务"赛道能赚大钱。但它的用户在找到工作后就流失了——"不找工作时"的需求完全无人服务。招聘平台MAU近1亿，说明"职业焦虑"是刚需。
+</div>
+
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">🌍 海外市场</h4>
+
+<div class="data-grid">
+<div class="data-card">
+<div class="data-num">$42亿</div>
+<div class="data-label">2024年全球AI职业教练市场</div>
+<div class="data-src">UKAI Research 2025.10</div>
+</div>
+<div class="data-card">
+<div class="data-num">$235亿</div>
+<div class="data-label">2034年预测（CAGR 18.8%）</div>
+<div class="data-src">UKAI Research 2025.10</div>
+</div>
+<div class="data-card">
+<div class="data-num">$47亿</div>
+<div class="data-label">BetterUp估值（AI职业教练标杆）</div>
+<div class="data-src">Sacra / Mordor Intelligence 2025</div>
+</div>
+<div class="data-card">
+<div class="data-num">$5.67亿</div>
+<div class="data-label">BetterUp累计融资</div>
+<div class="data-src">Sacra 2025</div>
+</div>
+</div>
+
+<div class="quote" style="margin:24px 0">
+<strong>BetterUp一家公司</strong>就拿到47亿美元估值和5.67亿美元融资——它的模式是<strong>B2B</strong>：企业以$3,600-9,000/员工/年的价格为员工购买教练服务，2024年营收$2.15亿，2025年预估$6.2亿（Sacra/GetLatka/CanvasBusinessModel）。这告诉我们两件事：(1) "AI职业教练"品类天花板极高；(2) B端企业买单意愿已被验证。<br><br>我们的核心定位：<strong>主做C端，B端为变现补充</strong>。先从C端痛点切入，把产品打磨好，积累用户和口碑；当产品验证完成后，B端企业福利采购是天然的规模化变现路径。
+</div>
+
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">📐 我们的市场测算</h4>
+
+<table class="tbl">
+<thead><tr><th>测算方法</th><th>逻辑</th><th>结论</th></tr></thead>
+<tbody>
+<tr><td><strong>自下而上</strong></td><td>2.4亿高教人口 × 30%有职业焦虑<sup style="color:rgba(148,163,184,.6)">注1</sup> × 5-10%愿付费<sup style="color:rgba(148,163,184,.6)">注2</sup> × ¥120-300/年</td><td>近期TAM：<strong style="color:white">3-10亿元/年</strong></td></tr>
+<tr><td><strong>自上而下</strong></td><td>全球$235亿(2034) × 50%(2030折算) × 12%(中国占比)</td><td>中期TAM：<strong style="color:white">50-100亿元</strong></td></tr>
+<tr><td><strong>对标推算</strong></td><td>BOSS直聘从0到82亿营收用了10年</td><td>中国AI职业教练标杆公司空间：<strong style="color:white">30-50亿</strong></td></tr>
+</tbody>
+</table>
+<p style="font-size:11px;color:rgba(148,163,184,.4);margin-top:8px;line-height:1.8">
+<strong>注1</strong>：智联招聘《2025年职场人工作生活满意度调研》显示，<strong>54.9%的中国职场人存在焦虑、烦躁问题</strong>。我们的测算取30%为保守下限，即使按最低口径，目标用户规模仍超过7000万。<br>
+<strong>注2</strong>："5-10%愿付费"参考在行/壹心理已验证的咨询付费率，新华网2026调研显示<strong>56.3%的青年愿意为情绪价值买单</strong>，可见付费意愿已被市场验证。
+</p>
+
+<div class="highlight hl-purple" style="text-align:center;margin-top:24px;padding:28px">
+<p style="font-size:15px;color:var(--text-muted)">这不是"红海中找蓝海"</p>
+<p style="font-size:clamp(20px,3vw,32px);font-weight:900;color:white;margin:8px 0">这是一片未开垦的大陆</p>
+<p style="font-size:14px;color:var(--text-muted)">即使按最保守口径，近期TAM也有3亿+，中期可达50-100亿。而且目前没有任何玩家。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 1.4 为什么是现在 -->
+<section class="section" id="p1-4" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">1.4 为什么是现在？— 四重叠加的窗口期</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">赛道大但时机不对等于白搭。AI+职业赛道正处于四个历史条件同时成立的罕见窗口。</p>
+
+<div class="card-grid">
+<div style="padding:24px;background:rgba(239,68,68,.08);border-radius:16px;border:1px solid rgba(239,68,68,.2)">
+<h4 style="color:#fca5a5;margin-bottom:10px">🔥 需求侧爆发</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">2025届毕业生<strong style="color:white">1,222万</strong>（连续多年创新高），16-24岁青年失业率<strong style="color:white">17.6%</strong>。"学历贬值 + AI替代"双重焦虑前所未有。不是"未来会有需求"，是"需求此刻正在爆发"。</p>
+</div>
+<div style="padding:24px;background:rgba(16,185,129,.08);border-radius:16px;border:1px solid rgba(16,185,129,.2)">
+<h4 style="color:#6ee7b7;margin-bottom:10px">🧠 供给侧成熟</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">2024-2025年大模型能力飞跃：<strong style="color:white">情感理解、长期记忆、个性化对话</strong>首次在技术上可行。两年前做这个产品，AI达不到；两年后做，窗口可能已关闭。</p>
+</div>
+<div style="padding:24px;background:rgba(245,158,11,.08);border-radius:16px;border:1px solid rgba(245,158,11,.2)">
+<h4 style="color:#fcd34d;margin-bottom:10px">💳 付费心智已建立</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">豆包/DeepSeek/Kimi让中国用户习惯了为AI工具付费；在行（¥300-800/次）和壹心理（¥300-600/次）证明了职业咨询和心理咨询的付费意愿。<strong style="color:white">用户"愿意为职业花钱"这件事已不需要验证。</strong></p>
+</div>
+<div style="padding:24px;background:rgba(139,92,246,.08);border-radius:16px;border:1px solid rgba(139,92,246,.2)">
+<h4 style="color:#c4b5fd;margin-bottom:10px">🏁 竞品真空期</h4>
+<p style="font-size:14px;color:var(--text-muted);line-height:1.8">国内<strong style="color:white">0家</strong>公司在做AI职业教练。招聘平台AI方向锁死在"撮合成交"。通用AI没有职业记忆。预估窗口期<strong style="color:white">1-2年</strong>——先发者将定义用户心智。</p>
+</div>
+</div>
+
+<div class="highlight hl-green" style="text-align:center;margin-top:24px;padding:28px">
+<p style="font-size:18px;font-weight:900;color:white;margin-bottom:8px">四个条件同时成立 = 最佳窗口</p>
+<p style="font-size:14px;color:var(--text-muted)">需求爆发 × 技术成熟 × 付费就位 × 竞品为零<br>这不是每年都有的机会——它正在发生，而且可能只持续1-2年。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== 第二部分：为什么是AI职业教练 ==================== -->
+<div class="divider"></div>
+
+<section class="section" id="p2-1">
+<div class="container">
+<div class="section-label">第二部分</div>
+<h2 class="section-title">为什么是"AI职业教练"这个产品形态？</h2>
+<p class="section-desc">赛道值得做≠随便做都行。要回答：现有玩家为什么不做？蓝海机会在哪？我们的切入点是什么？</p>
+
+<!-- 2.1 现有玩家 -->
+<div class="card">
+<div class="card-title">2.1 现有玩家都在做什么？——各品类与AI的结合现状</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">做职业的公司不少，但它们加AI之后，解决的是完全不同的问题。</p>
+
+<table class="tbl">
+<thead><tr><th style="width:14%">品类</th><th style="width:16%">代表产品</th><th style="width:28%">他们的AI在做什么</th><th style="width:28%">他们不做/做不了什么</th><th style="width:14%">根本原因</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>招聘平台</strong></td>
+<td>BOSS直聘<br>猎聘、智联</td>
+<td>AI简历优化（"直闪闪"助手）、智能岗位匹配（2.5亿人才库AI搜索）、AI模拟面试、AI托管筛选<br><span style="font-size:11px;color:rgba(148,163,184,.5)">BOSS直聘AI闭环业务已达亿元级</span></td>
+<td>❌ 不做长期职业陪伴<br>❌ 不做情绪支持/心理疏导<br>❌ 不做"不找工作时"的任何服务<br>❌ 不做跨周期职业记忆<br>❌ 不做被裁员/转型支持</td>
+<td style="color:#fca5a5">用户入职=流失<br>陪伴与商业模型矛盾</td>
+</tr>
+<tr>
+<td><strong>心理咨询</strong></td>
+<td>壹心理<br>简单心理</td>
+<td>AI情感陪伴、心理测评、在线匹配咨询师<br>¥300-600/次人工咨询</td>
+<td>❌ 不懂职场数据（行情、岗位要求）<br>❌ 给不出"市场行情×你的情况"的专业建议<br>❌ 无法做职业决策辅助</td>
+<td style="color:#fca5a5">团队基因是心理学<br>不是职场专家</td>
+</tr>
+<tr>
+<td><strong>知识付费</strong></td>
+<td>在行<br>得到</td>
+<td>在行：人工1v1匹配，¥300-800/次<br>得到：通用课程，无AI</td>
+<td>❌ 无法规模化（靠人力匹配）<br>❌ 不能个性化（课程是通用的）<br>❌ 价格门槛高（¥300+/次）</td>
+<td style="color:#fca5a5">商业模式依赖人力<br>AI不是核心能力</td>
+</tr>
+<tr>
+<td><strong>通用AI</strong></td>
+<td>DeepSeek<br>豆包/文心一言</td>
+<td>什么都能聊——包括职业问题<br>能力强大，但通用</td>
+<td>❌ 没有职业记忆（每次重新介绍自己）<br>❌ 没有持续跟踪（不知道你上次聊了什么）<br>❌ 没有主动推送（不会在你该做决策时提醒你）</td>
+<td style="color:#fca5a5">战略目标是平台<br>不会垂直深耕</td>
+</tr>
+<tr>
+<td><strong>职场社区</strong></td>
+<td>脉脉<br>知乎</td>
+<td>用户发帖倾诉（"35岁了还有出路吗"千万浏览）<br>人与人之间的非结构化交流</td>
+<td>❌ 只有吐槽没有解决方案<br>❌ 建议来自陌生人，质量不可控<br>❌ 无法个性化（别人的回答未必适合你）</td>
+<td style="color:#fca5a5">社区逻辑是内容分发<br>不是个性化服务</td>
+</tr>
+</tbody>
+</table>
+
+<div class="highlight hl-purple" style="text-align:center;margin-top:24px;padding:28px">
+<p style="font-size:18px;font-weight:800;color:white;margin-bottom:8px">一个关键结论</p>
+<p style="font-size:16px;color:rgba(255,255,255,.8)">没有任何产品同时具备<br><strong style="color:white;font-size:20px">"懂职场数据 + 记得你是谁 + 情感共鸣"</strong></p>
+<p style="font-size:14px;color:var(--text-muted);margin-top:12px">这不是因为没人想到——是因为每个品类的商业模型和团队基因，<br>从根本上不支持做这件事。</p>
+</div>
+
+<!-- BOSS直聘管理层原话 -->
+<div class="quote-danger" style="margin-top:24px">
+<strong>BOSS直聘管理层原话（2025年报电话会）：</strong><br>
+"招聘者的目的是有合适的人入职，求职者的目的是入职合适的岗位。AI可以帮助平台完成'最后一公里'的劳动，使大规模的闭环服务成为现实。"<br><br>
+<span style="font-size:13px;color:var(--text-muted)">→ 这句话暴露了招聘平台的战略方向：AI服务于"入职成交"，不是服务于"人的发展"。优化的是"招聘漏斗转化率"，不是"求职者的整个职业生涯"。</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 2.2 蓝海机会 -->
+<section class="section" id="p2-2" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">2.2 用户需求场景与蓝海机会</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">我们系统梳理了87个用户需求场景，覆盖职业全生命周期（从校园到退休），分为工具需求、情感需求、洞察需求三类。</p>
+
+<div class="data-grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="data-card">
+<div class="data-num">87</div>
+<div class="data-label">总场景数</div>
+</div>
+<div class="data-card" style="background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3)">
+<div class="data-num" style="color:#6ee7b7">71%</div>
+<div class="data-label">空白/极弱竞争（62个）</div>
+</div>
+<div class="data-card" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3)">
+<div class="data-num" style="color:#fcd34d">42</div>
+<div class="data-label">情感类场景（护城河所在）</div>
+</div>
+<div class="data-card" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3)">
+<div class="data-num" style="color:#fca5a5">仅7%</div>
+<div class="data-label">红海场景（6个，可绕开）</div>
+</div>
+</div>
+
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">三类需求的竞争格局完全不同</h4>
+
+<table class="tbl">
+<thead><tr><th>需求类型</th><th>场景数</th><th>竞争空白率</th><th>代表场景</th><th>产品价值</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-blue">🔧 工具需求</span></td><td>35个</td><td>~57%</td><td>简历优化、求职进度追踪、Offer对比、周报助手</td><td><strong style="color:white">入场券</strong> — 让用户进来</td></tr>
+<tr><td><span class="tag tag-yellow">💛 情感需求</span></td><td>42个</td><td><strong style="color:#6ee7b7">~90%</strong></td><td>35岁危机、面试被拒、职场PUA、职业迷茫</td><td><strong style="color:white">护城河</strong> — 让用户留下</td></tr>
+<tr><td><span class="tag tag-green">📊 洞察需求</span></td><td>10个</td><td>~70%</td><td>行业趋势分析、AI替代风险评估、薪资对标</td><td><strong style="color:white">增值层</strong> — 让用户信任</td></tr>
+</tbody>
+</table>
+
+<div class="quote" style="margin:24px 0">
+<strong>核心发现：</strong>情感需求（42个场景）比工具需求（35个）还多，而且90%空白。这意味着：市场的真正空白不在"效率工具"——而在<strong>"职业情感"</strong>。所有竞品都在卷工具，没有人在做情感。
+</div>
+
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">蓝海场景举例 — 让你感受这些需求有多真实</h4>
+
+<div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+<div class="scene">
+<div class="scene-emoji">😰</div>
+<div class="scene-title">"投了50份简历没回复"</div>
+<div class="scene-desc">BOSS直聘"已读不回"是全民痛点。用户需要的不只是"继续投"，更需要策略调整和情绪支持。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+<div class="scene">
+<div class="scene-emoji">😱</div>
+<div class="scene-title">"35岁了还能干什么"</div>
+<div class="scene-desc">知乎上千万浏览的焦虑话题。壹心理有课程但不懂职场，脉脉上只有吐槽没有个性化方案。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+<div class="scene">
+<div class="scene-emoji">💔</div>
+<div class="scene-title">"被裁员了"</div>
+<div class="scene-desc">需要情绪支持+法律指导+再就业计划三合一。目前0个产品覆盖这个场景。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+<div class="scene">
+<div class="scene-emoji">😤</div>
+<div class="scene-title">"领导PUA我，怎么办"</div>
+<div class="scene-desc">脉脉只能吐槽，壹心理不懂职场权力关系。需要"懂职场+懂心理"的AI来分析和建议。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+<div class="scene">
+<div class="scene-emoji">🤔</div>
+<div class="scene-title">"做了3年感觉方向不对"</div>
+<div class="scene-desc">在行找一次¥500咨询，一年也约不了几次。AI可以持续跟踪你的变化，随时给出建议。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+<div class="scene">
+<div class="scene-emoji">🤖</div>
+<div class="scene-title">"AI会取代我吗"</div>
+<div class="scene-desc">2025年最焦虑的话题。知乎/36氪大量讨论，但没有个性化评估工具告诉你"你的岗位风险有多大"。</div>
+<div class="scene-tag"><span class="tag tag-green">🟢 空白</span></div>
+</div>
+</div>
+
+<div class="highlight hl-amber" style="margin-top:32px;text-align:center;padding:28px">
+<p style="font-size:18px;font-weight:800;color:white;margin-bottom:8px">这些空白场景共同指向一个产品形态</p>
+<p style="font-size:15px;color:rgba(255,255,255,.8)">不是一个求职工具，不是一个心理App，不是一个知识付费平台<br>而是一个<strong style="color:var(--accent);font-size:20px">能理解你、记住你、陪伴你整个职业生涯的AI教练</strong></p>
+</div>
+
+<div class="card" style="margin-top:32px">
+  <div class="card-title">关于"情感空白不等于有需求"的回应</div>
+  <p style="color:var(--text-muted);font-size:14px;line-height:1.8">
+    市场空白确实需要验证，但我们判断：<strong>需求真实存在，且付费意愿已被间接验证</strong>：
+  </p>
+  <ul style="color:var(--text-muted);font-size:14px;line-height:1.8;margin:16px 0 0 20px;padding:0">
+    <li><strong>流量验证：</strong>智联招聘2025显示54.9%职场人有焦虑情绪；知乎"35岁危机"话题累计浏览超千万；脉脉"职场PUA"相关内容常年占据热榜——需求已经通过流量验证</li>
+    <li><strong>付费验证：</strong>在行单次职业咨询¥300-800，仍然供不应求；壹心理情感课程年营收数亿——用户已经为"职业+情感"组合付费，只是目前只能通过不高效的人工方式满足</li>
+    <li><strong>逻辑验证：</strong>职业是每个人投入时间最长、利益最大的人生领域，怎么可能没有情感需求？只是现有产品的商业模式决定了它们不会服务这个需求——不代表用户不需要</li>
+  </ul>
+  <p style="margin-top:16px;color:var(--text-muted);font-size:14px">我们的MVP方案本身就包含了用户验证：先用痛点场景做小范围测试，验证需求和付费意愿后再规模化扩张。</p>
+</div>
+
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">🎯 MVP聚焦：我们先做哪3-5个场景？</h4>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">我们不会一次性覆盖87个场景——MVP阶段聚焦最痛、最高频、最能建立记忆壁垒的5个核心场景：</p>
+<div class="card-grid" style="margin-bottom:32px">
+  <div style="padding:20px;background:rgba(239,68,68,.08);border-radius:12px;border:1px solid rgba(239,68,68,.2)">
+    <h4 style="color:#fca5a5;margin-bottom:8px">1. E17 职场PUA识别与应对</h4>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.6">用户痛点极强，天然具备传播性。懂职场+懂心理的AI分析是目前市场空白。</p>
+  </div>
+  <div style="padding:20px;background:rgba(239,68,68,.08);border-radius:12px;border:1px solid rgba(239,68,68,.2)">
+    <h4 style="color:#fca5a5;margin-bottom:8px">2. E13 35岁职业危机评估</h4>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.6">千万级搜索话题，没有个性化解决方案。结合用户经历给出转型建议。</p>
+  </div>
+  <div style="padding:20px;background:rgba(245,158,11,.08);border-radius:12px;border:1px solid rgba(245,158,11,.2)">
+    <h4 style="color:#fcd34d;margin-bottom:8px">3. W21 AI周报/周记助手</h4>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.6">每周都用的高频工具，自然积累用户职业上下文，是绝佳的留存引擎。</p>
+  </div>
+  <div style="padding:20px;background:rgba(245,158,11,.08);border-radius:12px;border:1px solid rgba(245,158,11,.2)">
+    <h4 style="color:#fcd34d;margin-bottom:8px">4. W25 项目复盘/成就记录</h4>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.6">帮助用户看见自己的成长，自动生成职业故事线，直接建立情感连接。</p>
+  </div>
+  <div style="padding:20px;background:rgba(16,185,129,.08);border-radius:12px;border:1px solid rgba(16,185,129,.2)">
+    <h4 style="color:#6ee7b7;margin-bottom:8px">5. W27 技能树/能力地图</h5>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.6">可视化成长轨迹，随着用户使用不断更新，时间壁垒极强。</p>
+  </div>
+</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:32px">
+<strong>三层逻辑：</strong>痛感场景（PUA/35岁危机）做拉新 → 高频工具（周报/复盘）做留存 → 记忆积累（成就记录/技能树）做护城河。一句话：<strong>工具钩子拉新 → 情感渗透留存 → 记忆壁垒锁客</strong>。
+</p>
+
+<!-- 红海场景说明 -->
+<h4 style="margin:32px 0 16px;color:rgba(239,68,68,.7)">🔴 竞争红海（仅6个场景，占7%）— 我们绕开</h4>
+<table class="tbl">
+<thead><tr><th>红海场景</th><th>主要竞品</th><th>我们的策略</th></tr></thead>
+<tbody>
+<tr><td>AI模拟面试</td><td>面试猫、Offer蛙、鹅来面、Gank、面多多、牛面</td><td>不做独立面试工具，作为教练的一个辅助功能</td></tr>
+<tr><td>笔试题库</td><td>牛客网、力扣、赛码网</td><td>完全不做，有需要时接入即可</td></tr>
+<tr><td>简历生成</td><td>超级简历WonderCV、五百丁</td><td>不做模板工具，做"有职业记忆的简历管理"</td></tr>
+<tr><td>通用AI写作</td><td>DeepSeek/豆包/文心一言</td><td>不做通用写作，做"有职业上下文记忆"的写作助手</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- 2.3 竞争护城河 -->
+<section class="section" id="p2-3" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">2.3 凭什么能做？— 竞争机会与护城河分析</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">最重要的问题：如果这个方向这么好，为什么大公司不做？做了以后怎么防？</p>
+
+<h4 style="margin-bottom:16px;color:var(--primary-light)">📌 招聘平台为什么不会做？— 5个结构性原因</h4>
+
+<div style="display:grid;gap:16px;margin-bottom:24px">
+<div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(99,102,241,.06);border-radius:12px">
+<div style="font-size:24px;min-width:40px;text-align:center">1️⃣</div>
+<div>
+<h4 style="margin-bottom:6px;font-size:15px">商业模型根本矛盾</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">招聘平台赚"成交佣金"——用户找到工作越快，平台收入越高。用户入职后就流失，<strong style="color:white">平台没有动力留住用户</strong>。我们赚"长期订阅"——用户留得越久、关系越深，收入越高。两种模式正交。</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(99,102,241,.06);border-radius:12px">
+<div style="font-size:24px;min-width:40px;text-align:center">2️⃣</div>
+<div>
+<h4 style="margin-bottom:6px;font-size:15px">用户心智矛盾 — 招聘平台不是"安全空间"</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">你会在BOSS直聘上对AI说"我被裁了很焦虑"或"我觉得老板PUA我"吗？<strong style="color:white">不会。</strong>招聘平台的用户心智是"找工作的工具"，自我呈现是"最好的自己"。情感倾诉需要"安全空间"，而招聘平台永远不可能成为安全空间。</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(99,102,241,.06);border-radius:12px">
+<div style="font-size:24px;min-width:40px;text-align:center">3️⃣</div>
+<div>
+<h4 style="margin-bottom:6px;font-size:15px">数据结构完全不同</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">招聘平台的数据：简历、岗位、投递记录——这是<strong style="color:white">"事务数据"</strong>。我们要积累的数据：职业目标、价值观、情绪变化、决策偏好、成长轨迹——这是<strong style="color:white">"关系数据"</strong>。用户愿意把"找工作的信息"给BOSS，但"我想成为什么样的人"需要一个完全不同的产品。</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(99,102,241,.06);border-radius:12px">
+<div style="font-size:24px;min-width:40px;text-align:center">4️⃣</div>
+<div>
+<h4 style="margin-bottom:6px;font-size:15px">功能重叠极小</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">BOSS直聘AI目前覆盖约<strong style="color:white">5个场景</strong>（简历优化、岗位推荐、模拟面试等）。我们87个场景中，与BOSS直接重叠的仅<strong style="color:white">6%</strong>，且均在红海区（我们本来就要绕开）。剩下<strong style="color:white">94%的场景</strong>——尤其42个情感场景——没有任何招聘平台在做或计划做。</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(99,102,241,.06);border-radius:12px">
+<div style="font-size:24px;min-width:40px;text-align:center">5️⃣</div>
+<div>
+<h4 style="margin-bottom:6px;font-size:15px">战略注意力不可能转向</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">BOSS直聘2025年营收82.7亿，闭环成交业务增速最快，2026年蓝领+下沉市场是增长引擎。让一个年营收80亿+的上市公司，放弃高速增长的"闭环成交"生意，转做天花板可能只有几亿的"职业教练"——<strong style="color:white">不符合任何商业逻辑</strong>。</p>
+</div>
+</div>
+</div>
+
+<div class="quote" style="margin:16px 0">
+<strong>类比：</strong>美团外卖不会去做健身App——即使它有全中国最多的食物消费数据。BOSS直聘不会去做职业教练——即使它有最多的求职行为数据。<strong>业务基因决定战略方向。</strong>
+</div>
+
+<!-- 竞争定位象限 -->
+<h4 style="margin:32px 0 16px;color:var(--primary-light)">🗺️ 竞争定位：我们和招聘平台是正交关系，不是竞争关系</h4>
+
+<div class="quadrant">
+<div class="q-axis-x"></div>
+<div class="q-axis-y"></div>
+<div class="q-label" style="top:5%;left:50%;transform:translateX(-50%)">长期关系型 ↑</div>
+<div class="q-label" style="bottom:5%;left:50%;transform:translateX(-50%)">↓ 短期交易型</div>
+<div class="q-label" style="top:50%;left:3%;transform:translateY(-50%);writing-mode:vertical-lr">← 情感驱动</div>
+<div class="q-label" style="top:50%;right:3%;transform:translateY(-50%);writing-mode:vertical-lr">工具驱动 →</div>
+<div class="q-dot" style="top:25%;left:30%;background:rgba(99,102,241,.9);color:white;box-shadow:0 0 20px rgba(99,102,241,.5);font-size:14px">AI职业教练<br>🎯 我们</div>
+<div class="q-dot" style="top:70%;left:75%;background:rgba(239,68,68,.7);color:white;font-size:11px">BOSS直聘</div>
+<div class="q-dot" style="top:65%;left:65%;background:rgba(239,68,68,.5);color:white;font-size:11px">猎聘</div>
+<div class="q-dot" style="top:75%;left:70%;background:rgba(239,68,68,.4);color:white;font-size:11px">智联</div>
+<div class="q-dot" style="top:35%;left:20%;background:rgba(148,163,184,.5);color:white;font-size:11px">壹心理</div>
+<div class="q-dot" style="top:55%;left:55%;background:rgba(148,163,184,.4);color:white;font-size:11px">在行</div>
+<div class="q-dot" style="top:50%;left:45%;background:rgba(148,163,184,.4);color:white;font-size:11px">脉脉</div>
+</div>
+
+<!-- 三层护城河 -->
+<h4 style="margin:40px 0 16px;color:var(--primary-light)">🛡️ 三层护城河：越用越深，越用越不可替代</h4>
+
+<div class="card-grid-3">
+<div style="padding:28px;background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.1));border-radius:16px;border:1px solid rgba(99,102,241,.3)">
+<div style="font-size:36px;margin-bottom:12px">💾</div>
+<h4 style="margin-bottom:10px">数据护城河</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">积累"关系数据"——价值观、情绪变化、职业目标、成长轨迹。这类数据<strong style="color:white">只有用户持续使用才能产生</strong>，竞品无法复制。</p>
+</div>
+<div style="padding:28px;background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(251,191,36,.1));border-radius:16px;border:1px solid rgba(245,158,11,.3)">
+<div style="font-size:36px;margin-bottom:12px">⏳</div>
+<h4 style="margin-bottom:10px">时间护城河</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">用3个月后，AI比你的朋友还了解你的职业处境。<strong style="color:white">换一个产品意味着从零开始</strong>——这是最高的迁移成本。</p>
+</div>
+<div style="padding:28px;background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(52,211,153,.1));border-radius:16px;border:1px solid rgba(16,185,129,.3)">
+<div style="font-size:36px;margin-bottom:12px">💛</div>
+<h4 style="margin-bottom:10px">情感护城河</h4>
+<p style="font-size:13px;color:var(--text-muted);line-height:1.8">42个情感场景，90%空白。这是<strong style="color:white">技术上可以做、但商业模式决定了别人不会做</strong>的领域。先做者独占。</p>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:32px">
+  <div class="card-title">如果大公司进来怎么办？——我们的Plan B</div>
+  <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">我们分析了5个结构性原因证明招聘平台不会做，但万一他们一定要做呢？我们有两层应对：</p>
+  <div style="display:grid;gap:16px">
+    <div style="padding:20px;background:rgba(245,158,11,.08);border-radius:12px;border:1px solid rgba(245,158,11,.2)">
+      <h4 style="color:#fcd34d;margin-bottom:8px;font-size:15px">1. 先发心智优势</h4>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.8">我们有1-2年窗口。当用户心智已经被"AI职业教练=我们"定义，大公司再进入时已经晚了。用户不会从一个已经懂你的产品换到一个不懂你的大公司产品。</p>
+    </div>
+    <div style="padding:20px;background:rgba(245,158,11,.08);border-radius:12px;border:1px solid rgba(245,158,11,.2)">
+      <h4 style="color:#fcd34d;margin-bottom:8px;font-size:15px">2. 差异化共生而非竞争</h4>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.8">我们和招聘平台的商业模型是正交关系——我们不抢招聘生意，我们做"不找工作时"的需求。当我们做起来后，反而有可能被招聘平台战略投资或收购，双方互补。</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- 2.4 窗口期与风险 -->
+<section class="section" id="p2-4" style="padding-top:0">
+<div class="container">
+<div class="card">
+<div class="card-title">2.4 窗口期多久？风险是什么？</div>
+<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">好的方向论证必须坦诚面对风险。以下是我们看到的机会窗口和主要挑战。</p>
+
+<h4 style="margin-bottom:16px;color:var(--success)">✅ 窗口期预估：1-2年</h4>
+
+<div style="display:grid;gap:12px;margin-bottom:24px">
+<div style="display:flex;gap:12px;align-items:center;padding:16px 20px;background:rgba(16,185,129,.06);border-radius:10px;border:1px solid rgba(16,185,129,.15)">
+<span style="font-size:13px;color:var(--text-muted)"><strong style="color:#6ee7b7">招聘平台不会转向</strong> — BOSS直聘82亿的闭环生意不会放弃去做几亿天花板的教练业务</span>
+</div>
+<div style="display:flex;gap:12px;align-items:center;padding:16px 20px;background:rgba(16,185,129,.06);border-radius:10px;border:1px solid rgba(16,185,129,.15)">
+<span style="font-size:13px;color:var(--text-muted)"><strong style="color:#6ee7b7">通用AI不会垂直深耕</strong> — 豆包/ChatGPT的战略目标是做平台，不是做细分场景的深度产品</span>
+</div>
+<div style="display:flex;gap:12px;align-items:center;padding:16px 20px;background:rgba(16,185,129,.06);border-radius:10px;border:1px solid rgba(16,185,129,.15)">
+<span style="font-size:13px;color:var(--text-muted)"><strong style="color:#6ee7b7">目前无创业竞品</strong> — 国内AI职业教练领域创业者数量为零，但1-2年内大概率会有人进入</span>
+</div>
+<div style="display:flex;gap:12px;align-items:center;padding:16px 20px;background:rgba(245,158,11,.06);border-radius:10px;border:1px solid rgba(245,158,11,.15)">
+<span style="font-size:13px;color:var(--text-muted)"><strong style="color:#fcd34d">唯一需警惕</strong> — 如果招聘平台推出"AI求职助手Pro"付费订阅，会侵入我们的工具层入口。但我们的差异化在情感层，不在工具层。</span>
+</div>
+</div>
+
+<h4 style="margin:32px 0 16px;color:rgba(239,68,68,.7)">⚠️ 主要风险与应对（坦诚面对）</h4>
+
+<table class="tbl">
+<thead><tr><th style="width:8%">#</th><th style="width:20%">风险</th><th style="width:32%">具体表现</th><th style="width:40%">应对思路</th></tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong style="color:white">获客难</strong></td>
+<td>"AI职业教练"品类认知为零。用户不会主动搜索一个不知道存在的东西。</td>
+<td>不用"AI职业教练"做获客——用<strong style="color:white">痛感场景</strong>做钩子。"AI帮你分析面试失败原因""AI帮你评估35岁转型路径"——用户一听就懂。教练身份是用着用着自然感知到的。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong style="color:white">留存挑战</strong></td>
+<td>AI陪伴类产品留存普遍偏低（Character.AI活跃-29%）。新鲜感衰减是结构性问题。</td>
+<td>不做纯陪伴——用<strong style="color:white">高频工具场景</strong>做留存引擎。周报助手（每周用）、求职进度追踪（每天用）让用户有明确理由打开App。情感是副产品，不是主产品。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong style="color:white">C端付费意愿</strong></td>
+<td>中国消费者对软件付费率极低。全部AI App的iOS收入合计仅约$50万。</td>
+<td>多元化变现：C端低客单价订阅（¥10-25/月）+ B端企业购买（为员工提供职业教练）+ 增值服务（简历/面试深度辅导）。B端可能是更快的变现路径。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="quote-success" style="margin-top:24px">
+<strong>总结：</strong>风险存在但可控。每个风险都有对应的策略：<br>
+<strong>痛感场景拉新</strong>（解决获客）→ <strong>高频工具留存</strong>（解决留存）→ <strong>情感积累做护城河</strong>（解决壁垒）→ <strong>B端+C端多元变现</strong>（解决付费）
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== 总结 ==================== -->
+<div class="divider"></div>
+
+<section class="section" style="padding-bottom:40px">
+<div class="container">
+<div class="highlight" style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e3a5f 100%);box-shadow:0 20px 60px rgba(99,102,241,.3);text-align:center;padding:60px 40px">
+<h2 style="font-size:clamp(24px,4vw,36px);font-weight:900;color:white;margin-bottom:32px">总结：为什么是AI职业教练</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:32px;text-align:center">
+<div>
+<div style="font-size:48px;margin-bottom:8px">🎯</div>
+<div style="font-size:15px;font-weight:700;color:white;margin-bottom:4px">精准赛道</div>
+<div style="font-size:13px;color:rgba(255,255,255,.6)">垂直任务Agent × 职业领域<br>公式验证通过</div>
+</div>
+<div>
+<div style="font-size:48px;margin-bottom:8px">💰</div>
+<div style="font-size:15px;font-weight:700;color:white;margin-bottom:4px">巨大市场</div>
+<div style="font-size:13px;color:rgba(255,255,255,.6)">2.4亿目标用户<br>中期TAM 50-100亿</div>
+</div>
+<div>
+<div style="font-size:48px;margin-bottom:8px">🏔️</div>
+<div style="font-size:15px;font-weight:700;color:white;margin-bottom:4px">完全空白</div>
+<div style="font-size:13px;color:rgba(255,255,255,.6)">国内0竞品<br>71%场景无人覆盖</div>
+</div>
+<div>
+<div style="font-size:48px;margin-bottom:8px">🛡️</div>
+<div style="font-size:15px;font-weight:700;color:white;margin-bottom:4px">天然护城河</div>
+<div style="font-size:13px;color:rgba(255,255,255,.6)">数据+时间+情感<br>三层不可替代壁垒</div>
+</div>
+<div>
+<div style="font-size:48px;margin-bottom:8px">⏰</div>
+<div style="font-size:15px;font-weight:700;color:white;margin-bottom:4px">最佳窗口</div>
+<div style="font-size:13px;color:rgba(255,255,255,.6)">四重条件叠加<br>窗口期1-2年</div>
+</div>
+</div>
+
+<div style="max-width:700px;margin:0 auto;padding:28px;background:rgba(255,255,255,.08);border-radius:16px;border:1px solid rgba(255,255,255,.15)">
+<p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.9);line-height:1.9">
+<strong style="color:white">2.4亿人</strong>需要职业成长陪伴，没有人在做。<br>
+招聘平台<strong style="color:#fca5a5">不会做</strong>——商业模型矛盾。<br>
+通用AI<strong style="color:#fca5a5">做不了</strong>——没有职业记忆。<br>
+心理平台<strong style="color:#fca5a5">不懂</strong>——缺乏职场数据。<br><br>
+技术<strong style="color:#6ee7b7">刚好成熟</strong>，市场<strong style="color:#6ee7b7">完全空白</strong>，窗口<strong style="color:#fcd34d">1-2年</strong>。<br><br>
+我们做的不是"又一个AI工具"——<br>
+是<strong style="color:var(--accent);font-size:20px">"一个从你毕业陪你到退休的AI职业教练"</strong>。
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="footer">
+<p><strong>AI职业教练 · 方向论证报告</strong></p>
+<p style="margin-top:8px;opacity:.6">刘阳 · 2026年3月30日</p>
+<p style="margin-top:4px;opacity:.4">数据来源：BOSS直聘年报 · 艾瑞咨询 · UKAI Research · RevenueCat · a16z · Sensor Tower · QuestMobile</p>
+</div>
+
+</div>
+
+<div class="scroll-top" id="scrollTop"></div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})
+});
+const btn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.pageYOffset>400)});
+btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.card,.scene,.highlight,.data-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(24px)';el.style.transition='opacity .5s ease,transform .5s ease';obs.observe(el)});
+// Nav active state
+const sections=document.querySelectorAll('section[id]');
+const navBtns=document.querySelectorAll('.nav-btn');
+window.addEventListener('scroll',()=>{let cur='';sections.forEach(s=>{if(window.pageYOffset>=s.offsetTop-200)cur=s.id});navBtns.forEach(b=>{b.classList.toggle('active',b.getAttribute('href')==='#'+cur)})});
+</script>
+</body>
+</html>
